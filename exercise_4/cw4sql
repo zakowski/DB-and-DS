@@ -1,3 +1,5 @@
+#1
+
 DECLARE
 number_max NUMBER;
 new_department_name DEPARTMENTS.DEPARTMENT_NAME%TYPE:='EDUCATION';
