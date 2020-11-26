@@ -1,0 +1,10 @@
+DECLARE
+number_max NUMBER;
+new_department_name DEPARTMENTS.DEPARTMENT_NAME%TYPE:='EDUCATION';
+BEGIN
+SELECT MAX(DEPARTMENT_ID) INTO number_max 
+FROM DEPARTMENTS;
+DBMS_OUTPUT.PUT_LINE('max id departamentu: ' || number_max);
+INSERT INTO departments (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID) 
+VALUES (number_max+10, new_department_name, NULL, NULL);
+END;
